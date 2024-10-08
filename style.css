@@ -1,0 +1,246 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #fef3e6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #000B1B;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: index 1;
+}
+
+.logo {
+    width: 200px;  /* Increased size for a bigger logo */
+    height: auto;
+}
+
+.certificate-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate-section:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-section h2 {
+    font-size: 2rem;
+    color: #ff6f00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.certificate-section p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 2px solid #ff6f00;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #ff8c42;
+    outline: none;
+}
+
+button {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff8c42;
+}
+
+.social-links{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a {
+    color:#333;
+    text-decoration: none;
+    margin:0 10px;
+    font-size: 1rem;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .certificate-section {
+        padding: 20px 10px;
+        margin: 20px auto;
+    }
+
+    .certificate-section h2 {
+        font-size: 1.5rem;
+    }
+
+    form input[type="text"], form input[type="date"] {
+        width: 90%;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+    }
+}
+
+/* For mobile screens (phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .certificate-section {
+        padding: 15px 5px;
+        margin: 10px auto;
+    }
+
+    .certificate-section h2 {
+        font-size: 1.2rem;
+    }
+
+    form input[type="text"], form input[type="date"] {
+        width: 95%;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        bottom: 5px;
+        right: 5px;
+        padding: 3px;
+    }
+}
+
+/* For laptops (wide screens) */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .certificate-section {
+        padding: 50px 30px;
+    }
+
+    .certificate-section h2 {
+        font-size: 2.5rem;
+    }
+
+    form input[type="text"], form input[type="date"] {
+        width: 75%;
+    }
+
+    button {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+}

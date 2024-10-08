@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragya Entrepreneurship Cell</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="pragya.jpg" alt="Pragya E-Cell Logo" class="logo">
+      <h1>Pragya Entrepreneurship Cell</h1>
+      <p>Presidency University, Bangalore-560001</p>
+      <p>Heads Above the Rest.</p>
+    </div>
+  </header>
+
+  <section class="certificate-section">
+    <div class="container">
+        <h2>Check Your Certificate</h2>
+        <p>Enter your certificate number below to verify:</p> <!-- Updated this line -->
+        <form id="certificate-form">
+            <input type="text" id="certificate-input" placeholder="Enter Certificate Number" required> <!-- Changed placeholder -->
+            <p>Certificate Number should be of 13 Characters</p>
+            <button type="submit">Check Certificate</button>
+        </form>
+        <label for="upload-excel">Upload Excel File:</label>
+        <input type="file" id="upload-excel" title="Upload the Excel file containing certificate details" />
+        <div id="result"></div>
+
+        <table id="certificate-details" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Certificate Number</th> 
+                    <th>Participant Name</th>
+                    <th>Category</th>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="result-certificate-number" style="padding-top: 20px;padding-bottom: 30px;padding-left: 40px;padding-right: 50px;"></td>
+                    <td id="result-participant-name" style="padding-top: 20px;padding-bottom: 30px;padding-left: 40px;padding-right: 50px;"></td>
+                    <td id="result-category"style="padding-top: 20px;padding-bottom: 30px;padding-left: 40px;padding-right: 50px;"></td>
+                    <td id="result-event-name"style="padding-top: 20px;padding-bottom: 30px;padding-left: 40px;padding-right: 50px;"></td>
+                    <td id="result-date"style="padding-top: 20px;padding-bottom: 30px;padding-left: 40px;padding-right: 50px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="http://linkedin.com/company/pragya-ecell" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="http://instagram.com/pragya.ecell" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
